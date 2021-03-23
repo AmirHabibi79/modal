@@ -1,0 +1,90 @@
+@keyframes bar{
+    0%{width: 0%;}
+    100%{width: 100%;}
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./gradienta-ix_kUDzCczo-unsplash.jpg");
+    background-size: cover;
+}
+.main span{
+    color: white;
+    font-size: 38px;
+    font-weight: bold;
+    padding-bottom: 100px;
+}
+.main button{
+    padding: 10px 30px;
+    outline: none;
+    border: none;
+    background: none;
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+}
+.main button::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+  background-image: url("./gradienta-ix_kUDzCczo-unsplash.jpg");
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.modal-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+}
+.modal{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255,255,255,.3);
+    width: 40%;
+    height: 50%;
+    border-radius: 1%;
+    backdrop-filter: blur(10px);
+    color:rgba(0,0,0,.9);
+    transform: scale(1);
+    opacity: 0;
+    transition: all .3s ease;
+}
+.modal h1{
+    padding: 10px;
+}
+.bar{
+   width: 0%; 
+   height: 2%;
+   background-image: url("./gradienta-ix_kUDzCczo-unsplash.jpg");
+   background-size: cover;
+   animation-timing-function: linear;
+}
+.count-down{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    direction: rtl;
+}
